@@ -59,6 +59,23 @@ export default function Header() {
                 placeholder="Name or Ingredients. (Vodka, Tequila, Coffee)"
               />
             </div>
+
+            <div className="space-y-4">
+              <label
+                htmlFor="ingredient"
+                className="block text-white uppercase font-extrabold text-lg "
+              >
+                Category
+              </label>
+
+              <select
+                id="ingredient"
+                name="ingredient"
+                className="p-3 w-full rounded-lg focus-outline-none "
+              >
+                <option value="">-- Select --</option>
+              </select>
+            </div>
           </form>
         )}
       </div>
