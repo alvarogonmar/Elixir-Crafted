@@ -37,6 +37,14 @@ export default function Header() {
             </NavLink>
           </nav>
         </div>
+
+        {isHome && (
+          <form action="">
+            <div>
+              <label htmlFor="ingredient">Name or Ingredients</label>
+            </div>
+          </form>
+        )}
       </div>
     </header>
   );
