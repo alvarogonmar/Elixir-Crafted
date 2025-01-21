@@ -1,7 +1,7 @@
 export default function IndexPage() {
   return (
     <>
-      <h1>Favorites</h1>
+      <h1>Home</h1>
     </>
   );
 }
