@@ -47,6 +47,14 @@ export default function Header() {
               >
                 Name or Ingredients
               </label>
+
+              <input
+                id="ingredient"
+                type="text"
+                name="ingredient"
+                className="p-3 w-full rounded-lg focus-outline-none "
+                placeholder="Name or Ingredients. (Vodka, Tequila, Coffee)"
+              />
             </div>
           </form>
         )}
