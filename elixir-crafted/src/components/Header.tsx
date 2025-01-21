@@ -76,6 +76,12 @@ export default function Header() {
                 <option value="">-- Select --</option>
               </select>
             </div>
+            <input
+              type="submit"
+              value="Search Recipes"
+              className="cursor-pointer bg-orange-800 hover:bg-orange-900 text-white 
+              font-extrabold w-full p-2 rounded-lg uppercase "
+            />
           </form>
         )}
       </div>
