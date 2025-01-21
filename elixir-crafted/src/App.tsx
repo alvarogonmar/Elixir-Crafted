@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>Elixir Crafted</h1>
+      <h1 className="text-6xl">Elixir Crafted</h1>
     </>
   );
 }
