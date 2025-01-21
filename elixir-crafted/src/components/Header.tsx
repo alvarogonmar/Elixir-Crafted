@@ -41,7 +41,12 @@ export default function Header() {
         {isHome && (
           <form action="">
             <div>
-              <label htmlFor="ingredient">Name or Ingredients</label>
+              <label
+                htmlFor="ingredient"
+                className="block text-white uppercase font-extrabold text-lg "
+              >
+                Name or Ingredients
+              </label>
             </div>
           </form>
         )}
