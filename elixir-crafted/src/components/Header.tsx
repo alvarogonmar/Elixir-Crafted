@@ -37,7 +37,7 @@ export default function Header() {
     }
 
     // Consultar las recetas
-    searchRecipes();
+    searchRecipes(searchFilters);
   };
 
   return (
