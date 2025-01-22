@@ -13,5 +13,7 @@ export async function getCategories() {
 }
 
 export async function getRecipes(searchFilters:SearchFilter) {
-    console.log(searchFilters)
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${searchFilters.category}&i=${searchFilters.ingredient}`
+    const {data} = await axios(url)
+    console.log(data)
 }
