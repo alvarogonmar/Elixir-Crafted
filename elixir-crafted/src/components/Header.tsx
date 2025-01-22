@@ -79,6 +79,8 @@ export default function Header() {
                 name="ingredient"
                 className="p-3 w-full rounded-lg focus-outline-none "
                 placeholder="Name or Ingredients. (Vodka, Tequila, Coffee)"
+                onChange={handleChange}
+                value={searchFilters.ingredient}
               />
             </div>
 
@@ -94,6 +96,8 @@ export default function Header() {
                 id="category"
                 name="category"
                 className="p-3 w-full rounded-lg focus-outline-none "
+                onChange={handleChange}
+                value={searchFilters.ingredient}
               >
                 <option value="">-- Select --</option>
                 {categories.drinks.map((category) => (
