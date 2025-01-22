@@ -16,5 +16,7 @@ export async function getRecipes(searchFilters:SearchFilter) {
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${searchFilters.category}&i=${searchFilters.ingredient}`
     const {data} = await axios(url)
     const result = DrinksAPIResponse.safeParse(data)
-    console.log(result)
+    if(result.success) {
+        return result.data
+    }
 }
