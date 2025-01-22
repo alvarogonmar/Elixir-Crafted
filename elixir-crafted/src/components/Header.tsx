@@ -29,10 +29,13 @@ export default function Header() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validar
+    // TODO: Validar
     if (Object.values(searchFilters).includes("")) {
       console.log("All Fields");
+      return;
     }
+
+    // Consultar las recetas
   };
 
   return (
