@@ -12,6 +12,7 @@ export default function Header() {
 
   const fetchCategories = useAppStore((state) => state.fetchCategories);
   const categories = useAppStore((state) => state.categories);
+  const searchRecipes = useAppStore((state) => state.searchRecipes);
 
   useEffect(() => {
     fetchCategories();
@@ -36,6 +37,7 @@ export default function Header() {
     }
 
     // Consultar las recetas
+    searchRecipes();
   };
 
   return (

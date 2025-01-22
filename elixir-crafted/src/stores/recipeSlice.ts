@@ -19,6 +19,6 @@ export const createRecipesSlice : StateCreator<RecipesSliceType>= (set) => ({
         })
     },
     searchRecipes: async () => {
-
+        console.log("aaa")
     }
 })
