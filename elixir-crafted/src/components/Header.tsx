@@ -1,10 +1,13 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useAppStore } from "../stores/useAppStore";
 
 export default function Header() {
+  const [searchFilters, setSearchFilters] = useState({
+    ingredient: "",
+    category: "",
+  });
   const { pathname } = useLocation();
-
   const isHome = useMemo(() => pathname === "/", [pathname]);
 
   const fetchCategories = useAppStore((state) => state.fetchCategories);
@@ -79,8 +82,8 @@ export default function Header() {
               </label>
 
               <select
-                id="ingredient"
-                name="ingredient"
+                id="category"
+                name="category"
                 className="p-3 w-full rounded-lg focus-outline-none "
               >
                 <option value="">-- Select --</option>
