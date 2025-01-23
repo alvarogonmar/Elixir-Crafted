@@ -9,7 +9,15 @@ export default function IndexPage() {
   return (
     <>
       <h1 className="text-6xl font-extrabold">Recipes</h1>
-      {hasDrinks}
+      {hasDrinks ? (
+        <>
+          <p>DRINKS YES</p>
+        </>
+      ) : (
+        <p className="my-10 text-center text-2xl">
+          There are no recipes yet, use the form
+        </p>
+      )}
     </>
   );
 }
