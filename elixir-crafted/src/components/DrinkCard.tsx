@@ -1,7 +1,8 @@
+import { Drink } from "../types";
 
 type DrinkCardProps = {
-    drink: 
-}
+  drink: Drink;
+};
 
 export default function DrinkCard() {
   return <div>DrinkCard</div>;
