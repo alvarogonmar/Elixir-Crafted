@@ -5,5 +5,5 @@ type DrinkCardProps = {
 };
 
 export default function DrinkCard({ drink }: DrinkCardProps) {
-  return <div>DrinkCard</div>;
+  return <h2>{drink.strDrink}</h2>;
 }
