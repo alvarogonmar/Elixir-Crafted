@@ -4,6 +4,6 @@ type DrinkCardProps = {
   drink: Drink;
 };
 
-export default function DrinkCard() {
+export default function DrinkCard({ drink }: DrinkCardProps) {
   return <div>DrinkCard</div>;
 }
