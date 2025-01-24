@@ -7,8 +7,13 @@ type DrinkCardProps = {
 export default function DrinkCard({ drink }: DrinkCardProps) {
   return (
     <div className="border shadow-lg">
-      <div>
-        <img src={drink.strDrinkThumb} alt={`${drink.strDrink} image`} />
+      <div className="overflow-hidden">
+        {/* Para que cuando la imagen rote no se salga del cuadro */}
+        <img
+          src={drink.strDrinkThumb}
+          alt={`${drink.strDrink} image`}
+          className="hover:scale-125 transition-transform hover:rotate-2"
+        />
       </div>
       <div className="p-5">
         <h2 className="text-2xl truncate font-black">{drink.strDrink}</h2>
