@@ -9,6 +9,7 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 import { useAppStore } from "../stores/useAppStore";
+import { Recipe } from "../types";
 
 export default function Modal() {
   const modal = useAppStore((state) => state.modal);
@@ -16,6 +17,10 @@ export default function Modal() {
   const selectedRecipe = useAppStore((state) => state.selectedRecipe);
 
   const renderIngredients = () => {
+    const ingredients: JSX.Element[] = [];
+    for (let i = 1; i <= 6; i++) {
+      const ingredient = selectedRecipe[`strIngredient${i}` as keyof Recipe];
+    }
     return <p>From renderIngredients</p>;
   };
 
