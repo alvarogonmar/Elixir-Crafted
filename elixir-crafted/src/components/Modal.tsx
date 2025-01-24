@@ -97,6 +97,7 @@ export default function Modal() {
                       type="button"
                       className="w-full rounded bg-gray-600 p-3 
                       font-bold uppercase shadow text-white hover:bg-gray-500"
+                      onClick={closeModal}
                     >
                       Close
                     </button>
@@ -104,6 +105,7 @@ export default function Modal() {
                       type="button"
                       className="w-full rounded bg-orange-600 p-3 
                       font-bold uppercase shadow text-white hover:bg-orange-500"
+                      onClick={() => handleAddToFavorites()}
                     >
                       Add to Favorites
                     </button>
