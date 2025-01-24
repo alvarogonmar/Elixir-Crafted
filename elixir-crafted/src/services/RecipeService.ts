@@ -22,5 +22,7 @@ export async function getRecipes(searchFilters:SearchFilter) {
 }
 
 export async function getRecipeById(id:Drink['idDrink']) {
-    console.log(id)
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+    const {data} = await axios(url)
+    console.log(data)
 }
