@@ -82,7 +82,7 @@ export default function Modal() {
                     as="h3"
                     className="text-gray-900 text-2xl font-extrabold my-5"
                   >
-                    Ingredientes y Cantidades
+                    Ingredients and Measure
                   </DialogTitle>
                   {renderIngredients()}
                   <DialogTitle
