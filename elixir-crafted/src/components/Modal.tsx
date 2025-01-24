@@ -20,6 +20,7 @@ export default function Modal() {
     const ingredients: JSX.Element[] = [];
     for (let i = 1; i <= 6; i++) {
       const ingredient = selectedRecipe[`strIngredient${i}` as keyof Recipe];
+      const measure = selectedRecipe[`strMeasure${i}` as keyof Recipe];
     }
     return <p>From renderIngredients</p>;
   };
