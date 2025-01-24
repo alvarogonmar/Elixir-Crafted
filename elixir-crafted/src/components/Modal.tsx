@@ -15,6 +15,10 @@ export default function Modal() {
   const closeModal = useAppStore((state) => state.closeModal);
   const selectedRecipe = useAppStore((state) => state.selectedRecipe);
 
+  const renderIngredients = () => {
+    return <p>From renderIngredients</p>;
+  };
+
   return (
     <>
       <Transition appear show={modal} as={Fragment}>
@@ -66,7 +70,7 @@ export default function Modal() {
                   >
                     Ingredientes y Cantidades
                   </DialogTitle>
-
+                  {renderIngredients()}
                   <DialogTitle
                     as="h3"
                     className="text-gray-900 text-2xl font-extrabold my-5"
