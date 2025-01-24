@@ -92,6 +92,15 @@ export default function Modal() {
                     Instructions
                   </DialogTitle>
                   <p className="text-lg">{selectedRecipe.strInstructions}</p>
+                  <div className="mt-5 flex justify-between gap-4">
+                    <button
+                      type="button"
+                      className="w-full rounded bg-gray-600 p-3 
+                      font-bold uppercase shadow text-white hover:bg-gray-500"
+                    >
+                      Close
+                    </button>
+                  </div>
                 </DialogPanel>
               </TransitionChild>
             </div>
