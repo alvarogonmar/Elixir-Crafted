@@ -7,6 +7,7 @@ export type RecipesSliceType = {
     drinks: Drinks,
     fetchCategories: () => Promise<void>,
     searchRecipes: (searchFilters: SearchFilter) => Promise<void>
+    selectRecipe: () => Promise<void>
 }
 
 export const createRecipesSlice : StateCreator<RecipesSliceType>= (set) => ({
@@ -27,5 +28,8 @@ export const createRecipesSlice : StateCreator<RecipesSliceType>= (set) => ({
         set({
             drinks
         })
+    },
+    selectRecipe: async () => {
+        console.log("from select")
     }
 })
