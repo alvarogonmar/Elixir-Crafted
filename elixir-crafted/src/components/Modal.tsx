@@ -21,8 +21,16 @@ export default function Modal() {
     for (let i = 1; i <= 6; i++) {
       const ingredient = selectedRecipe[`strIngredient${i}` as keyof Recipe];
       const measure = selectedRecipe[`strMeasure${i}` as keyof Recipe];
+
+      if (ingredient && measure) {
+        ingredients.push(
+          <li key={i} className="text-lg font-normal">
+            {ingredient} - {measure}
+          </li>
+        );
+      }
     }
-    return <p>From renderIngredients</p>;
+    return ingredients;
   };
 
   return (
