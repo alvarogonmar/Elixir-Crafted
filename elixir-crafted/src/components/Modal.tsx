@@ -100,6 +100,13 @@ export default function Modal() {
                     >
                       Close
                     </button>
+                    <button
+                      type="button"
+                      className="w-full rounded bg-orange-600 p-3 
+                      font-bold uppercase shadow text-white hover:bg-orange-500"
+                    >
+                      Add to Favorites
+                    </button>
                   </div>
                 </DialogPanel>
               </TransitionChild>
