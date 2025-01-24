@@ -1,3 +1,4 @@
+import { useAppStore } from "../stores/useAppStore";
 import { Drink } from "../types";
 
 type DrinkCardProps = {
@@ -5,6 +6,7 @@ type DrinkCardProps = {
 };
 
 export default function DrinkCard({ drink }: DrinkCardProps) {
+  const selectRecipe = useAppStore((state) => state.selectRecipe);
   return (
     <div className="border shadow-lg">
       <div className="overflow-hidden">
