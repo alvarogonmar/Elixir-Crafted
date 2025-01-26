@@ -104,7 +104,7 @@ export default function Modal() {
                     <button
                       type="button"
                       className="w-full rounded bg-orange-600 p-3 
-                      font-bold uppercase shadow text-white hover:bg-orange-600"
+                      font-bold uppercase shadow text-white hover:bg-orange-500"
                       onClick={() => handleAddToFavorites()}
                     >
                       Add to Favorites
