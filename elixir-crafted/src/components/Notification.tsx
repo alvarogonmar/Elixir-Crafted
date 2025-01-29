@@ -2,11 +2,10 @@ import { Fragment } from "react";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { Transition } from "@headlessui/react";
+import { useAppStore } from "../stores/useAppStore";
 
 export default function Notification() {
-  const notification = {
-    show: true,
-  };
+  const notification = useAppStore((state) => state.notification);
 
   return (
     <div
