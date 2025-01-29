@@ -4,6 +4,6 @@ export type NotificationSliceType = {
 
 }
 
-export const createFavoritesSlice : StateCreator<NotificationSliceType> = (set, get, api) => ({
-    
+export const createNotificationSlice : StateCreator<NotificationSliceType> = (set, get) => ({
+
 })
