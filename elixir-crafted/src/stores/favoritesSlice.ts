@@ -10,13 +10,11 @@ export type FavoritesSliceType = {
 export const createFavoritesSlice : StateCreator<FavoritesSliceType> = (set, get) => ({
     favorites: [],
     handleClickFavorite: (recipe) => {
-        if(get().favorites.some(favorite => favorite.idDrink === recipe.idDrink)){
+        if(get().favoriteExists(recipe.idDrink)){
             set((state) => ({
                 favorites: state.favorites.filter( favorite => favorite.idDrink !== recipe.idDrink)
             }))
         } else {
-            console.log("no")
-
             set((state) => ({
                 favorites: [...state.favorites, recipe]
             }))
