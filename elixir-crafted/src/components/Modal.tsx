@@ -80,7 +80,7 @@ export default function Modal() {
                   ></img>
                   <DialogTitle
                     as="h3"
-                    className="text-gray-900 text-2xl font-extrabold my-5"
+                    className="text-gray-800 text-2xl font-extrabold my-5"
                   >
                     Ingredients and Measure
                   </DialogTitle>
