@@ -132,7 +132,21 @@ export default function Header() {
               type="submit"
               value="Search Recipes"
               className="cursor-pointer bg-orange-800 hover:bg-orange-900 text-white 
-              font-extrabold w-full p-2 rounded-lg uppercase "
+  font-extrabold w-full p-2 rounded-lg uppercase "
+              onClick={(e) => {
+                // Evitar scroll si algún campo está vacío
+                if (Object.values(searchFilters).includes("")) {
+                  e.preventDefault(); // Previene cualquier acción adicional
+                  showNotification({
+                    text: "All Fields are Required",
+                    error: true,
+                  });
+                  return;
+                }
+
+                // Realizar el scroll solo si los campos están completos
+                window.scrollTo({ top: 847, behavior: "smooth" });
+              }}
             />
           </form>
         )}
