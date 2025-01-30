@@ -14,7 +14,7 @@ export type NotificationSliceType = {
 }
 
 export const createNotificationSlice : StateCreator<NotificationSliceType & 
-FavoritesSliceType, [], [], NotificationSliceType> = (set) => ({
+FavoritesSliceType, [], [], NotificationSliceType> = (set, get) => ({
     notification: {
         text: "",
         error: false,
@@ -28,6 +28,9 @@ FavoritesSliceType, [], [], NotificationSliceType> = (set) => ({
                 show:true
             }
         })
+        setTimeout(() => {
+            get().hideNotification()
+        }, 4000);
     },
     hideNotification: () => {
         set({
