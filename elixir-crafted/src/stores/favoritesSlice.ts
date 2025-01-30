@@ -16,12 +16,12 @@ export const createFavoritesSlice : StateCreator<FavoritesSliceType & Notificati
             set((state) => ({
                 favorites: state.favorites.filter( favorite => favorite.idDrink !== recipe.idDrink)
             }))
-            createNotificationSlice(set, get, api).showNotification({text: "Removed from Favorites", error: false})
+            createNotificationSlice(set, get, api).showNotification({text: `Removed "${recipe.strDrink}" from Favorites`, error: false})
         } else {
             set((state) => ({
                 favorites: [...state.favorites, recipe]
             }))
-            createNotificationSlice(set, get, api).showNotification({text: "Added to Favorites", error: false})
+            createNotificationSlice(set, get, api).showNotification({text: `Added "${recipe.strDrink}" to Favorites`, error: false})
         }
         localStorage.setItem("favorites", JSON.stringify(get().favorites))
     },
